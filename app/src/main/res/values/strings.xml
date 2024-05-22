@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MortadeloYMafalda</string>
+    <string name="tvOpcionesFondo">Opciones del Fondo</string>
+    <string name="cbTransparente">Transparente</string>
+    <string name="cbFondoRojo">Fondo rojo</string>
+    <string name="cbActivityVerde">Activity verde</string>
+    <string name="rbCentradoSinEstirar">Centrado sin estirar</string>
+    <string name="rbEstirado">Estirado</string>
+</resources>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvOpcionesFondo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/tvOpcionesFondo"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/cbTransparente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cbTransparente"
+        app:layout_constraintEnd_toStartOf="@+id/cbActivityVerde"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/cbFondoRojo"
+        app:layout_constraintTop_toBottomOf="@+id/tvOpcionesFondo" />
+
+    <CheckBox
+        android:id="@+id/cbFondoRojo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cbFondoRojo"
+        app:layout_constraintBottom_toBottomOf="@+id/cbTransparente"
+        app:layout_constraintEnd_toStartOf="@+id/cbTransparente"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cbTransparente"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <CheckBox
+        android:id="@+id/cbActivityVerde"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cbActivityVerde"
+        app:layout_constraintBottom_toBottomOf="@+id/cbTransparente"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/cbTransparente"
+        app:layout_constraintTop_toTopOf="@+id/cbTransparente" />
+
+    <ImageView
+        android:id="@+id/ivCentral"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbTransparente"
+        app:srcCompat="@android:mipmap/sym_def_app_icon" />
+
+    <ImageButton
+        android:id="@+id/ibMortadelo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/ibMafalda"
+        app:layout_constraintEnd_toStartOf="@+id/ibMafalda"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ibMafalda"
+        app:srcCompat="@drawable/mortadelo" />
+
+    <ImageButton
+        android:id="@+id/ibMafalda"
+        android:layout_width="0dp"
+        android:layout_height="108dp"
+        android:layout_marginBottom="20dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ibMortadelo"
+        app:srcCompat="@drawable/mafalda" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/ibMortadelo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RadioButton
+            android:id="@+id/rbCentradoSinEstirar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rbCentradoSinEstirar" />
+
+        <RadioButton
+            android:id="@+id/rbEstirado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:foregroundGravity="clip_horizontal|center_horizontal"
+            android:scrollbarAlwaysDrawHorizontalTrack="false"
+            android:scrollHorizontally="false"
+            android:text="@string/rbEstirado" />
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
